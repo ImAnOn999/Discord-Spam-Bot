@@ -42,7 +42,7 @@ while timer > 0:#While the timer is greater than 0, it will continue firing this
 
 while messages > 0:#While the messages remaining are greater than 0, it will continue firing this function
     changeId(currentId, authorizationCodes, currentMessage, spamMessages)#Fires the changeId function every time
-    requests.post('https://discord.com/api/v9/channels/' + id + '/messages', headers = header, data = payload)#Sends the fake http request to discord
+    requests.post('https://discord.com/api/v9/channels/' + str(id) + '/messages', headers = header, data = payload)#Sends the fake http request to discord
     messages -= 1#Subtracts 1 from the remaining messages to be sent 
     time.sleep(delay)#Waits for the delay set by the user
 
